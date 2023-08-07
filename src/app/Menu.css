@@ -1,0 +1,47 @@
+.menu__container {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.menu__container.active {
+  display: block;
+}
+
+.menu__background {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  width: 80%;
+  margin: 0 auto;
+  min-height: 300px;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+}
+
+.menu__button {
+  background: #999 url('https://i.ibb.co/rb2TWXL/bgbtn.png') center / cover;
+	image-rendering: pixelated;
+	border: 2px solid #000;
+  padding: 10px;
+  width: 460px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.menu__button:hover {
+  background: rgba(100, 100, 255, .45);
+	text-shadow: 2px 2px #202013CC;
+	color: #FFFFA0;
+}
