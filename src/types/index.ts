@@ -1,0 +1,1 @@
+export { ICube } from './cube'

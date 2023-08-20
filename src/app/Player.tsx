@@ -1,8 +1,18 @@
 import { useRef, useEffect, RefObject } from 'react'
-import { BufferGeometry, Material, Mesh, NormalBufferAttributes, Vector3 } from 'three'
+import {
+  TextureLoader,
+  NearestFilter,
+  Vector3,
+  BufferGeometry,
+  Material,
+  Mesh,
+  NormalBufferAttributes
+} from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useKeyboardControls } from '@react-three/drei'
 import { useSphere } from '@react-three/cannon'
+
+import groudTextureImage from '../assets/textures/ground.jpg'
 
 const JUMP_FORCE = 4;
 const SPEED = 4;
@@ -17,6 +27,9 @@ export const Player = () => {
 		type: 'Dynamic',
 		position: [0, 1, 0],
 	}))
+
+  const groundTexture = new TextureLoader().load(groudTextureImage)
+  groundTexture.magFilter = NearestFilter
 
 	useEffect(() => {
 		const unsubscribe = api.velocity.subscribe((v) => vel.current = v)
@@ -51,6 +64,15 @@ export const Player = () => {
   })
 
   return (
-    <mesh ref={ref as RefObject<Mesh<BufferGeometry<NormalBufferAttributes>, Material | Material[]>>}></mesh>
+    <mesh
+      ref={ref as RefObject<Mesh<BufferGeometry<NormalBufferAttributes>, Material | Material[]>>}
+    >
+      <boxGeometry attach="geometry" />
+      <meshStandardMaterial
+        opacity={1}
+        attach="material"
+        map={groundTexture}
+      />
+    </mesh>
   )
 }
