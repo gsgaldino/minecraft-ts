@@ -12,7 +12,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useKeyboardControls } from '@react-three/drei'
 import { useSphere } from '@react-three/cannon'
 
-import groudTextureImage from '../assets/textures/ground.jpg'
+import groudTextureImage from '@/assets/textures/grass.jpg'
 
 const JUMP_FORCE = 4;
 const SPEED = 4;

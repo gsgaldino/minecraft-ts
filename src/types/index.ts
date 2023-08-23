@@ -1,1 +1,1 @@
-export { ICube } from './cube'
+export type { ICube, CubeTexture } from './cube'

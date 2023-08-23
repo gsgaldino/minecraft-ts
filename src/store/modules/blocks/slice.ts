@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { ICube } from '@/types'
 
 interface BlocksState {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  blocks: any[]
+  blocks: ICube[]
 }
 
 const initialState: BlocksState = {
@@ -18,6 +18,7 @@ const blocksSlice = createSlice({
     },
     addBlocks: (state, action) => {
       state.blocks.concat(action.payload)
+      console.log('blocks', state.blocks)
     }
   }
 })

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Crosshair.module.css'
+import './styles.module.css'
 
 export const Crosshair = () => {
   return (
