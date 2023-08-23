@@ -1,4 +1,4 @@
-# TypeScript Minecraft Clone
+# Minecraft TypeScript Clone
 
 This project is a Minecraft clone implemented in TypeScript using the @react-three/fiber and @react-three/drei libraries. It's created for educational purposes and is currently in the development phase.
 
@@ -41,7 +41,7 @@ yarn install
 yarn dev
 ```
 
-Now you can open your web browser and navigate to http://localhost:3000 to see the Minecraft Clone in action.
+Now you can open your web browser and navigate to http://localhost:5173 to see the Minecraft Clone in action.
 Use the arrow keys for basic player movement. Experiment with block creation and destruction using mouse clicks.
 
 **Disclaimer**: This project is not affiliated with Mojang Studios or Minecraft. It is solely an educational exercise and a tribute to the creativity of game developers.
